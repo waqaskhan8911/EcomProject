@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="dqwf.css"> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .bottom-footer-section {
+        bottom: -25rem;
+    }
+
+    .cartcardtemplatemain {
+        width: 100%;
+        /* background-color: #000; */
+        display: flex;
+        border: 1px solid gray;
+        margin: 5rem 0;
+        align-items: center;
+        /* justify-content: space-around; */
+
+        & button {
+            padding: .5rem 3rem;
+            font-size: 1.6rem;
+            background: #000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 0 2rem;
+        }
+
+        & button:hover {
+            transform: scale(1.1);
+
+
+        }
+
+        & button::before {
+
+            display: none;
+        }
+
+        & img {
+            width: 180px;
+            height: 120px;
+
+        }
+
+        & .cart-id {
+            border: 5px solid black;
+            /* padding: 1rem; */
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            border-radius: 50%;
+        }
+
+        & .cart-brand {
+            font-size: 2rem;
+            padding: 0 1rem;
+            margin: 0 2rem;
+
+        }
+    }
+
+    .CartIncrementDecrementContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        margin: 0 2rem;
+
+        & p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .2rem .5rem;
+            border-left: 1px solid gray;
+        }
+
+        & p:nth-child(1) {
+            border: none;
+            cursor: pointer;
+        }
+
+        & p:nth-child(2) {
+            border-right: 1px solid gray;
+            padding: .2rem 1.5rem;
+            pointer-events: none;
+        }
+
+        & p:nth-child(3) {
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .cart-id-contanier {
+        margin: 0 10px;
+        padding: 0 1rem;
+    }
+
+    .cart-img-container {
+        margin: 2rem;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: #000; */
+    }
+
+    .cart-color-container {
+        padding: 0 1rem;
+        margin: 0 5rem 0 2rem;
+        width: 100px;
+
+        & p {
+            width: 100px;
+        }
+    }
+
+    .cart-material-container {
+        width: 200px;
+        margin: 0 3rem;
+
+        & h3 {
+            font-size: 2rem;
+        }
+    }
+
+
+    .cartsec-contanier {
+        border: 1px solid gray;
+        padding: 1rem 5rem;
+        margin: 10rem 0;
+    }
+
+    .cart-total-price{
+        padding: 2rem;
+        float: right;
+        border: 1px solid gray;
+
+
+        & .sub-total-price{
+            padding: .5rem 1rem;
+            text-transform: uppercase;
+        }
+
+        & .Dilivery-Fee{
+            padding: .5rem 1rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid gray;
+        }
+
+        & .total-Price{
+            padding: .5rem 1rem;
+            text-transform: uppercase;
+            margin-top: 1rem;
+            
+            & span{
+                font-size: 2rem;
+                font-weight: 500;
+            }
+        }
+    }
+</style>
+
+<body>
+    <!-- navbar start -->
+    <header class="header">
+        <nav class="container nav">
+
+            <div class="navbar-main-content">
+                <ul class="navbar">
+                    <li class="navbar-item" data-aos="fade-down" data-aos-delay="50"><a href="index.html"
+                            class="navbar-link">HOME</a></li>
+                    <li class="navbar-item" data-aos="fade-down" data-aos-delay="100"><a href="index.html"
+                            id="about-link" class="navbar-link">ABOUT US</a></li>
+                    <li class="navbar-item" data-aos="fade-down" data-aos-delay="150"><a href="index.html"
+                            id="about-link" class="navbar-link">SERVICES</a></li>
+                    <li class="navbar-item" data-aos="fade-down" data-aos-delay="200">
+                        <div class="navbar-brand">
+                            <img src="Daco_4219859.png" alt="this is an img" width="100px">
+                        </div>
+                    </li>
+                    <li class="navbar-item" data-aos="fade-down" data-aos-delay="250"><a href="store.html"
+                            class="navbar-link">STORE</a></li>
+                    <li class="navbar-item" data-aos="fade-down" data-aos-delay="300"><a href="index.html"
+                            class="navbar-link">CONTACT US</a></li>
+                    <li class="navbar-item" data-aos="fade-down" data-aos-delay="350"><a href="Storecart.html"><button
+                                type="button" class="btn-store"><i class="fa-solid fa-cart-shopping"></i><span
+                                    class="cartValue">0</span> </button></a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <!-- navbar End -->
+
+
+
+    <!-- Cart Section start -->
+    <section class="cart-Section">
+        <div class="container">
+            <div class="cartsec-contanier">
+
+            </div>
+
+
+            <div class="cart-total-price">
+                <p class="sub-total-price"><span>Sub Total: </span><span class="main-sub-price"> 0</span></p>
+                <p class="Dilivery-Fee"><span>Dilivery Fee: </span> <span class="main-delivery-fee"> 50</span></p>
+                <p class="total-Price"><span>Total Price: </span><span class="main-total-price"> 50</span></p>
+            </div>
+        </div>
+    </section>
+
+    <template class="cartcardtemplate">
+        <div class="cartcardtemplatemain" id="cardValue">
+            <div class="cart-id-contanier">
+                <p class="cart-id">0</p>
+            </div>
+            <h3 class="cart-brand">Nike</h3>
+            <div class="cart-img-container">
+                <img src="" alt="" class="cart-img">
+            </div>
+            <div class="cart-color-container">
+                <p class="cart-color"></p>
+            </div>
+            <div class="cart-material-container">
+                <h3 class="cart-material" id="price"></h3>
+            </div>
+            <div class="CartIncrementDecrementContainer">
+                <p class="cartproductIncrement" id="increase"> + </p>
+                <p class="cartproductActualValue" id="quantity"> 1 </p>
+                <p class="cartproductDecrement" id="decrease"> - </p>
+            </div>
+            <div class="cart-btn-container">
+                <button class="cart-remove-btn">Remove</button>
+            </div>
+        </div>
+    </template>
+    <!-- Cart Section End -->
+
+
+
+    <!-- footer Start -->
+    <footer class="Footer-Section bottom-footer-section">
+        <div class="imges">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+            <div class="wave wave4"></div>
+        </div>
+        <div class="container">
+            <div class="footer-social-icons social-icons ">
+                <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer_links">
+                <ul>
+                    <li class="footer-item"><a href="index.html" class="footer-link">Home</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link">About</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link">Services</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link">Store</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+            <p class="footer-para">© 2024 Nike All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- footer End -->
+
+
+    <!-- Javascript code Start -->
+
+
+
+    <!-- Javascript code -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+     <script type="module">
+
+        let productArr = [];
+        const DELIVERY_FEE = 50; // Define the delivery fee
+    
+        // Function to add product data to localStorage
+        function addCardDataToLS(evt, id) {
+            const PresentProduct = document.querySelector(`#card${id}`);
+    
+            let price = parseFloat(PresentProduct.querySelector(".product-price").innerText);
+            let imgSrc = PresentProduct.querySelector(".card-main-img").src;
+            let shoesColor = PresentProduct.querySelector(".Product-color").innerText;
+            let shoesMaterial = PresentProduct.querySelector(".Product-material").innerText;
+    
+            // Retrieve product data from localStorage
+            let storedData = JSON.parse(localStorage.getItem("productDetails")) || [];
+    
+            // Find the existing product in the cart
+            let existingProduct = storedData.find(product => product.id === id);
+    
+            if (existingProduct) {
+                // Update quantity if the product is already in the cart
+                existingProduct.quantity += 1;
+            } else {
+                // Add new product data if it's not already in the cart
+                let productDataArr = { id, price, shoesColor, imgSrc, shoesMaterial, quantity: 1 };
+                storedData.push(productDataArr);
+            }
+    
+            // Save updated data to localStorage
+            localStorage.setItem("productDetails", JSON.stringify(storedData));
+    
+            // Update cart UI and values
+            productArr = storedData; // Update the local productArr
+            updateCartValue();
+            getDataFromLS();
+        }
+    
+        // Load product data from localStorage
+        let objstr = localStorage.getItem("productDetails");
+        if (objstr != null) {
+            productArr = JSON.parse(objstr);
+        }
+    
+        // Function to update the cart value
+        const updateCartValue = () => {
+            const cartValue = document.querySelector('.cartValue');
+            cartValue.innerText = productArr.length;
+        };
+    
+        // Update Subtotal and store it in localStorage
+        const updateSubTotal = () => {
+            let subTotal = productArr.reduce((acc, product) => {
+                let productPrice = parseFloat(product.price);
+                let productQuantity = parseInt(product.quantity, 10);
+    
+                // Check if the parsed values are valid numbers
+                if (isNaN(productPrice)) productPrice = 0;
+                if (isNaN(productQuantity)) productQuantity = 0;
+    
+                return acc + (productPrice * productQuantity);
+            }, 0);
+    
+            document.querySelector('.main-sub-price').innerText = subTotal.toFixed(2);
+            localStorage.setItem("subTotal", subTotal);
+        };
+    
+        // Update Total Price and store it in localStorage
+        const updateTotalPrice = () => {
+            const subTotal = parseFloat(localStorage.getItem("subTotal")) || 0;
+            const deliveryFee = productArr.length > 0 ? DELIVERY_FEE : 0; // Add delivery fee only if cart has items
+    
+            const totalPrice = subTotal + deliveryFee;
+            document.querySelector('.main-delivery-fee').innerText = deliveryFee.toFixed(2);
+            document.querySelector('.main-total-price').innerText = totalPrice.toFixed(2);
+            localStorage.setItem("totalPrice", totalPrice);
+        };
+    
+        const getDataFromLS = () => {
+            const cartsecContanier = document.querySelector(".cartsec-contanier");
+            const cartcardtemplate = document.querySelector(".cartcardtemplate");
+    
+            // Clear the container first
+            cartsecContanier.innerHTML = '';
+    
+            // Load product details from localStorage
+            let productDetails = localStorage.getItem("productDetails");
+            let dataStore = productDetails ? JSON.parse(productDetails) : [];
+    
+            dataStore.forEach((product, index) => {
+                const { id, price, shoesColor, imgSrc, shoesMaterial } = product;
+    
+                const cartcardtemplateclone = document.importNode(cartcardtemplate.content, true);
+    
+                // Set the product data in the template
+                cartcardtemplateclone.querySelector("#cardValue").setAttribute("id", `card${id}`);
+                const increaseButton = cartcardtemplateclone.querySelector('#increase');
+                const decreaseButton = cartcardtemplateclone.querySelector('#decrease');
+                const quantityElement = cartcardtemplateclone.querySelector('#quantity');
+                const priceElement = cartcardtemplateclone.querySelector('#price');
+                cartcardtemplateclone.querySelector('.cart-img').src = imgSrc;
+                cartcardtemplateclone.querySelector('.cart-id').innerText = `${id}`;
+                cartcardtemplateclone.querySelector('.cart-color').innerText = `${shoesColor}`;
+    
+                // Set initial values
+                let basePrice = parseFloat(price); // Ensure price is a number
+                let quantity = product.quantity || 1; // Use stored quantity or default to 1
+    
+                // Function to update the price based on the quantity
+                function updatePrice() {
+                    const newPrice = basePrice * quantity;
+                    priceElement.innerText = `Price: ${newPrice.toFixed(2)}`; // Update the price displayed
+                }
+    
+                // Update localStorage with the new quantity and price
+                function updateLocalStorage() {
+                    product.quantity = quantity;
+                    productArr[index] = product;
+                    localStorage.setItem("productDetails", JSON.stringify(productArr));
+                    updateSubTotal(); // Update subtotal whenever quantity changes
+                    updateTotalPrice(); // Update total price
+                }
+    
+                // Event listener for the increase button
+                increaseButton.addEventListener('click', () => {
+                    quantity++; // Increment quantity
+                    quantityElement.innerText = quantity; // Update quantity displayed
+                    updatePrice(); // Update price based on the new quantity
+                    updateLocalStorage(); // Save changes to localStorage
+                });
+    
+                // Event listener for the decrease button
+                decreaseButton.addEventListener('click', () => {
+                    if (quantity > 1) { // Ensure quantity doesn't go below 1
+                        quantity--; // Decrement quantity
+                        quantityElement.innerText = quantity; // Update quantity displayed
+                        updatePrice(); // Update price based on the new quantity
+                        updateLocalStorage(); // Save changes to localStorage
+                    }
+                });
+    
+                // Initial setup
+                quantityElement.innerText = quantity;
+                updatePrice(); // Set the initial price based on the default quantity
+    
+                // Add click event listener for the remove button
+                cartcardtemplateclone.querySelector('.cart-remove-btn').addEventListener('click', () => {
+                    // Remove product from dataStore
+                    dataStore = dataStore.filter(item => item.id !== id);
+                    productArr = dataStore; // Update productArr
+    
+                    // Save the updated dataStore to localStorage
+                    localStorage.setItem("productDetails", JSON.stringify(dataStore));
+    
+                    // Re-render the products
+                    getDataFromLS();
+                    updateCartValue(); // Update cart value after removing product
+                    updateSubTotal(); // Update subtotal after removing a product
+                    updateTotalPrice(); // Update total price
+                });
+    
+                // Append the cloned template to the container
+                cartsecContanier.appendChild(cartcardtemplateclone);
+            });
+    
+            updateSubTotal(); // Ensure subtotal is updated after loading data
+            updateTotalPrice(); // Ensure total price is updated after loading data
+        }
+    
+        // Initial load of products
+        getDataFromLS();
+    
+        // Load subtotal and total price from localStorage on page load
+        const storedSubTotal = parseFloat(localStorage.getItem("subTotal")) || 0;
+        document.querySelector('.main-sub-price').innerText = storedSubTotal.toFixed(2);
+        
+        const deliveryFee = productArr.length > 0 ? DELIVERY_FEE : 0;
+        const totalPrice = storedSubTotal + deliveryFee;
+        document.querySelector('.main-delivery-fee').innerText = deliveryFee.toFixed(2);
+        document.querySelector('.main-total-price').innerText = totalPrice.toFixed(2);
+    
+        // Update cart value on initial load
+        updateCartValue();
+    
+    </script>
+    
+    <!-- Javascript code end  -->
+</body>
+c
+</html>

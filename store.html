@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+    <!-- navbar start -->
+    <header class="header">
+        <nav class="container nav">
+            
+            <div class="navbar-main-content">
+                <ul class="navbar">
+                    <li class="navbar-item" data-aos="fade-down"  data-aos-delay="50"><a href="index.html" class="navbar-link">HOME</a></li>
+                    <li class="navbar-item" data-aos="fade-down"  data-aos-delay="100"><a href="index.html" id="about-link" class="navbar-link">ABOUT US</a></li>
+                    <li class="navbar-item" data-aos="fade-down"  data-aos-delay="150"><a href="index.html" id="about-link" class="navbar-link">SERVICES</a></li>
+                    <li class="navbar-item" data-aos="fade-down"  data-aos-delay="200"><div class="navbar-brand">
+                        <img src="Daco_4219859.png" alt="this is an img" width="100px">
+                    </div></li>
+                    <li class="navbar-item" data-aos="fade-down"  data-aos-delay="250"><a href="store.html" class="navbar-link">STORE</a></li>
+                    <li class="navbar-item" data-aos="fade-down"  data-aos-delay="300"><a href="index.html" class="navbar-link">CONTACT US</a></li>
+                    <li class="navbar-item" data-aos="fade-down"  data-aos-delay="350"><a href="Storecart.html"><button type="button" class="btn-store"><i
+                                    class="fa-solid fa-cart-shopping"></i><span class="cartValue">0</span> </button></a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+        <!-- navbar End -->
+
+
+        <!-- Store Section Start -->
+         <section class="store-section">
+            <div class="container">
+                <div class="grid grid-three card-container ">
+                </div>
+            </div>
+         </section>
+         <template class="cardtemplate" >
+            <div class="card-main-container main-card" id="cardValue">
+                <div class="card-img-section">
+                    <h1>Nike</h1>
+                    <img src="/imges/SHO4-removebg-preview.png" alt="this is an img" width="400px" class="card-main-img">
+                </div>
+                <div class="card-product-details">
+                    <h2>Product Details:</h2>
+                    <p class="Product-material"></p>
+                    <p class="Product-color"></p>
+                    <p class="Product-Quality">Quality: Good</p>
+                </div>
+                <div class="product-price-container">
+                    <h2 class="product-price"> </h2>
+                </div>
+                <div class="product-addToCartButton">
+                    <button type="button" class="Addtocartbtn">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+        </template>
+         
+        <!-- Store Section End -->
+
+
+        <!-- footer Start -->
+        <footer class="Footer-Section">
+            <div class="imges">
+                <div class="wave wave1"></div>
+                <div class="wave wave2"></div>
+                <div class="wave wave3"></div>
+                <div class="wave wave4"></div>
+            </div>
+            <div class="container">
+                <div class="footer-social-icons social-icons ">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <div class="footer_links">
+                    <ul>
+                        <li class="footer-item"><a href="index.html" class="footer-link">Home</a></li>
+                        <li class="footer-item"><a href="#" class="footer-link">About</a></li>
+                        <li class="footer-item"><a href="#" class="footer-link">Services</a></li>
+                        <li class="footer-item"><a href="#" class="footer-link">Store</a></li>
+                        <li class="footer-item"><a href="#" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <p class="footer-para">© 2024 Nike All rights reserved.</p>
+            </div>
+      </footer>
+     <!-- footer End -->
+
+
+<!-- Javascript start     -->
+
+
+<script type="module">
+    // products start
+    
+    let product = [
+        
+            {
+                "id": 1,
+                "imgSrc": "freepik-export-20240809032139IEPD.png",
+                "material": "fabric, foam",
+                "color": "Yellow,black,blue",
+                "Price": 8500,
+                "AddtocartbtnBG": "linear-gradient(135deg, rgba(0, 3, 2, 1) 0%, rgba(0, 255, 239, 1) 100%)",
+                "imgSectionBG": "linear-gradient(135deg, rgba(0, 3, 2, 1) 0%, rgba(0, 255, 239, 1) 100%)",
+                "transform": "(-30deg) translate3d(10px, -20px, 0)",
+                "width": "400px"
+            },
+            {
+                "id": 2,
+                "imgSrc": "shoes3.png",
+                "material": "fabric and foam",
+                "color": "Black ",
+                "Price": 8000,
+                "AddtocartbtnBG": "linear-gradient(135deg, rgb(41, 41, 41) 0%, rgb(41, 41, 41) 100%)",
+                "imgSectionBG": "linear-gradient(135deg, rgb(41, 41, 41) 0%, rgb(45, 45, 45) 100%)",
+                "transform": "(-30deg)"
+            },
+            {
+                "id": 3,
+                "imgSrc": "sho4.png",
+                "material": "fabric and foam",
+                "color": "Sea Green",
+                "Price": 9000,
+                "AddtocartbtnBG": "linear-gradient(135deg, rgba(0, 86, 128, 1) 0%, rgb(209, 237, 255) 100%)",
+                "imgSectionBG": "linear-gradient(135deg, rgba(0, 86, 128, 1) 0%, rgb(209, 237, 255) 100%)",
+                "transform": "(-30deg)",
+                "width": "380px"
+            },
+            {
+                "id": 4,
+                "imgSrc": "SHO2-removebg-preview.png",
+                "material": "fabric and foam",
+                "color": "White",
+                "top": "10%",
+                "Price": 9900,
+                "AddtocartbtnBG": "linear-gradient(135deg, rgb(165, 168, 169) 0%, rgb(213, 220, 224) 100%)",
+                "imgSectionBG": "linear-gradient(135deg, rgb(165, 168, 169) 0%, rgb(213, 220, 224) 100%)",
+                "transform": "(-30deg)",
+                "width": "440px",
+            },
+            {
+                "id": 5,
+                "imgSrc": "shoes10.png",
+                "material": "fabric and foam",
+                "color": "White,Orange",
+                "top": "20%",
+                "Price": 10000,
+                "AddtocartbtnBG": "linear-gradient(135deg, rgb(189, 197, 201) 0%, rgb(157, 209, 254) 100%)",
+                "imgSectionBG": "linear-gradient(135deg, rgb(189, 197, 201) 0%, rgb(157, 209, 254) 100%)",
+                "transform": "(-30deg) translate3d(-20px, -20px, 0)",
+                "width": "500px"
+            },
+            {
+                "id": 6,
+                "imgSrc": "SHO5-removebg-preview.png",
+                "material": "fabric and foam",
+                "color": "White,Orange",
+                "top": "35%",
+                "Price": 11000,
+                "AddtocartbtnBG": "linear-gradient(135deg, rgb(41, 41, 41) 0%, rgb(208, 208, 208) 100%) ",
+                "imgSectionBG": "linear-gradient(135deg, rgb(41, 41, 41) 0%, rgb(208, 208, 208) 100%)",
+                "transform": "(-30deg)",
+                "width": "380px"
+            },
+        ]
+        // products end
+    
+        console.log(product);
+    
+        const cardtemplate = document.querySelector(".cardtemplate");
+        const cardContainer = document.querySelector(".card-container");
+    
+        product.forEach((ProEle) => {
+            let { id, imgSrc, material, color, Price, AddtocartbtnBG, imgSectionBG, transform, width, top, height } = ProEle;
+    
+            const productClone = document.importNode(cardtemplate.content, true);
+    
+            productClone.querySelector("#cardValue").setAttribute("id", `card${id}`);
+    
+            productClone.querySelector(".card-img-section").style.background = imgSectionBG;
+            productClone.querySelector(".card-main-img").src = imgSrc;
+            productClone.querySelector(".card-main-img").style.transform = `rotateZ${transform}`;
+            productClone.querySelector(".card-main-img").style.top = top;
+            productClone.querySelector(".card-main-img").style.width = width;
+            productClone.querySelector(".card-main-img").style.height = height || "auto"; // Set height if available
+            productClone.querySelector(".Product-color").innerText = `Color: ${color}`;
+            productClone.querySelector(".Product-material").innerText = `Material: ${material}`;
+            productClone.querySelector(".product-price").innerText = `Price: ${Price}`;
+            productClone.querySelector(".Addtocartbtn").style.background = AddtocartbtnBG;
+    
+            productClone.querySelector(".Addtocartbtn").addEventListener("click", (evt) => {
+                addCardDataToLS(evt, id);
+
+            });
+    
+            cardContainer.append(productClone);
+        });
+    
+        export let productArr = [];
+    
+        const addCardDataToLS = (evt, id) => {
+            const PresentProduct = document.querySelector(`#card${id}`);
+    
+            let price = parseFloat(PresentProduct.querySelector(".product-price").innerText.replace(/[^0-9.-]/g, '')); // Remove any non-numeric characters
+            let imgSrc = PresentProduct.querySelector(".card-main-img").src;
+            let shoesColor = PresentProduct.querySelector(".Product-color").innerText;
+            let shoesMaterial = PresentProduct.querySelector(".Product-material").innerText;
+    
+            // Retrieve product data from localStorage
+            let storedData = JSON.parse(localStorage.getItem("productDetails")) || [];
+    
+            // Find the existing product in the cart
+            let existingProduct = storedData.find(product => product.id === id);
+    
+            if (existingProduct) {
+                // Update quantity if the product is already in the cart
+                existingProduct.quantity += 1;
+            } else {
+                // Add new product data if it's not already in the cart
+                let productDataArr = { id, price, shoesColor, imgSrc, shoesMaterial, quantity: 1 };
+                storedData.push(productDataArr);
+            }
+    
+            // Save updated data to localStorage
+            localStorage.setItem("productDetails", JSON.stringify(storedData));
+    
+            // Update productArr and cart value
+            productArr = storedData;
+            cartValue.innerText = productArr.length;
+        }
+    
+        let objstr = localStorage.getItem("productDetails");
+        if (objstr != null) {
+            productArr = JSON.parse(objstr);
+        }
+    
+        const cartValue = document.querySelector('.cartValue');
+        cartValue.innerText = productArr.length;
+    
+    </script>
+    
+    <!-- Javascript  End   -->
+
+    
+<!-- Javascript code -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+</body>
+</html>
